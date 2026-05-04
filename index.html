@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ofer Löwinger — Pianist & Violinist</title>
+<title>Loading…</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -109,8 +109,14 @@ footer{background:var(--charcoal);border-top:1px solid rgba(184,150,90,0.15);pad
 </head>
 <body>
 
+<!-- ═══════════════════════════════════════════════════════════════
+     All visible content is injected by JavaScript from content.json.
+     To update text, videos, bio, or contact details — edit content.json.
+     Never edit the text content inside this file directly.
+     ═══════════════════════════════════════════════════════════════ -->
+
 <nav>
-  <a href="#" class="nav-logo">Ofer Löwinger</a>
+  <a href="#" class="nav-logo" id="nav-logo"></a>
   <ul class="nav-links">
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#about">About</a></li>
@@ -119,200 +125,60 @@ footer{background:var(--charcoal);border-top:1px solid rgba(184,150,90,0.15);pad
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Pianist &amp; Violinist · Berlin</p>
-    <h1 class="hero-name">Ofer<br><em>Löwinger</em></h1>
-    <p class="hero-tagline">Piano &amp; Violin — Solo, Duo &amp; Live Performance</p>
+    <p class="hero-eyebrow" id="hero-eyebrow"></p>
+    <h1 class="hero-name" id="hero-name"></h1>
+    <p class="hero-tagline" id="hero-tagline"></p>
     <div class="hero-divider"></div>
-    <p class="hero-desc">Available for restaurants, hotels, events, and accompaniment. Bringing warmth and elegance to every setting — from intimate background music to fully live performance.</p>
+    <p class="hero-desc" id="hero-desc"></p>
     <a href="#contact" class="btn">Get in touch
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </a>
   </div>
   <div class="hero-right">
-    <img class="hero-img" src="ofer.png" alt="Ofer Löwinger at the piano">
+    <img class="hero-img" id="hero-img" src="" alt="">
     <div class="hero-img-overlay"></div>
-    <span class="hero-location">Berlin, Germany</span>
+    <span class="hero-location" id="hero-location"></span>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section class="portfolio" id="portfolio">
   <div class="fade-in">
-    <p class="section-label">Portfolio</p>
-    <h2 class="section-title">Hear the music</h2>
+    <p class="section-label" id="portfolio-label"></p>
+    <h2 class="section-title" id="portfolio-title"></h2>
   </div>
-
-  <!-- OFER - TAB CATEGORIES: these are your 3 performance types shown as tabs. Add/rename if needed. -->
-  <div class="tabs-row fade-in">
-    <button class="tab-btn active" onclick="switchTab('piano-solo')">Piano Solo</button>
-    <button class="tab-btn" onclick="switchTab('accompaniment')">Piano Accompaniment</button>
-    <button class="tab-btn" onclick="switchTab('violin')">Violin Live</button>
-  </div>
-
-  <div id="piano-solo" class="tab-panel active fade-in">
-    <!-- OFER - DESCRIPTION PIANO SOLO: edit the sentence below to describe your piano solo act -->
-    <p class="tab-desc">Ambient and background repertoire — classical, jazz standards, and original arrangements for restaurants, hotels, and private events.</p>
-    <div class="videos-grid">
-      <!-- OFER - VIDEOS PIANO SOLO: replace each video-placeholder block below with a YouTube embed.
-           To embed a YouTube video, replace the entire <div class="video-placeholder">...</div>
-           with: <iframe class="video-embed" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-           Also update the video-title and video-sub text for each card. -->
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Piano Solo — Venue Set</p><p class="video-sub">Background · Classical</p></div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Jazz Standards</p><p class="video-sub">Background · Jazz</p></div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Original Arrangement</p><p class="video-sub">Solo · Contemporary</p></div>
-      </div>
-    </div>
-    <a href="#" class="gallery-link">See full gallery →</a>
-  </div>
-
-  <div id="accompaniment" class="tab-panel fade-in">
-    <!-- OFER - DESCRIPTION ACCOMPANIMENT: edit the sentence below to describe your accompaniment work -->
-    <p class="tab-desc">Available for singers and instrumentalists — rehearsals, recordings, and live performance. Adaptable repertoire across classical, pop, and world music.</p>
-    <div class="videos-grid">
-      <!-- OFER - VIDEOS ACCOMPANIMENT: replace each video-placeholder block below with a YouTube embed.
-           To embed: <iframe class="video-embed" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Piano & Vocalist</p><p class="video-sub">Duo · Live Performance</p></div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Piano & Strings</p><p class="video-sub">Duo · Classical</p></div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Chamber Session</p><p class="video-sub">Ensemble · Live</p></div>
-      </div>
-    </div>
-    <a href="#" class="gallery-link">See full gallery →</a>
-  </div>
-
-  <div id="violin" class="tab-panel fade-in">
-    <!-- OFER - DESCRIPTION VIOLIN: edit the sentence below to describe your violin live act -->
-    <p class="tab-desc">Live violin performance with custom piano playbacks — from intimate street concerts to private events and stages across Berlin.</p>
-    <div class="videos-grid">
-      <!-- OFER - VIDEOS VIOLIN: replace each video-placeholder block below with a YouTube embed.
-           To embed: <iframe class="video-embed" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Violin Street Performance</p><p class="video-sub">Live · Berlin</p></div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Classical Violin</p><p class="video-sub">Solo · Playback</p></div>
-      </div>
-      <div class="video-card">
-        <div class="video-placeholder">
-          <div class="play-ring"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/></svg></div>
-          <span class="placeholder-label">Your video here</span>
-        </div>
-        <div class="video-info"><p class="video-title">Violin & Piano Set</p><p class="video-sub">Live Event</p></div>
-      </div>
-    </div>
-    <a href="#" class="gallery-link">See full gallery →</a>
-  </div>
+  <div class="tabs-row fade-in" id="tabs-row"></div>
+  <div id="tab-panels"></div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-grid">
     <div class="about-sticky fade-in">
       <p class="section-label">About</p>
-      <p class="about-quote">"Music that suits the room — and stays with the people in it."</p>
+      <p class="about-quote" id="about-quote"></p>
     </div>
-    <div class="about-body fade-in">
-      <!-- OFER - BIO: edit the paragraphs below with your own words. Keep it warm and professional. -->
-      <p>I'm <strong>Ofer Löwinger</strong>, a pianist and violinist based in <strong>Berlin</strong>. My work spans solo piano for restaurants and hotels, piano accompaniment for singers and instrumentalists, and live violin performance with custom orchestral playbacks.</p>
-      <p>With a background rooted in classical training and broadened by jazz, world music, and contemporary styles, I bring both technical depth and genuine musicality to every engagement. Whether the setting calls for soft background ambience or a full live act, I adapt to the room and the audience.</p>
-      <p>Currently performing regularly in Berlin and available for bookings across Germany and Europe — including restaurants, cruise ships, private events, and concert stages.</p>
-      <!-- OFER - TAGS: add or remove tags below to match your actual skills and styles -->
-      <div class="tags">
-        <span class="tag">Piano Solo</span>
-        <span class="tag">Piano Accompaniment</span>
-        <span class="tag">Violin Live</span>
-        <span class="tag">Classical</span>
-        <span class="tag">Jazz</span>
-        <span class="tag">Background Music</span>
-        <span class="tag">Available Europe-wide</span>
-      </div>
-    </div>
+    <div class="about-body fade-in" id="about-body"></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-grid">
     <div class="fade-in">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">Let's work together</h2>
-      <p class="contact-intro">Available for restaurant residencies, cruise ship engagements, private events, and accompaniment sessions. Based in Berlin — open to travel.</p>
+      <p class="section-label" id="contact-label"></p>
+      <h2 class="section-title" id="contact-title"></h2>
+      <p class="contact-intro" id="contact-intro"></p>
       <br><br>
-      <a href="mailto:ofer@lowinger.art" class="btn btn-light">Send an enquiry →</a>
+      <a id="contact-email-btn" href="#" class="btn btn-light">Send an enquiry →</a>
     </div>
-    <div class="contact-items fade-in">
-      <!-- OFER - CONTACT DETAILS: fill in your real email, phone, and social media links below -->
-      <div>
-        <p class="contact-lbl">Email</p>
-        <p class="contact-val"><a href="mailto:ofer@lowinger.art">ofer@lowinger.art</a></p>
-      </div>
-      <div>
-        <p class="contact-lbl">WhatsApp / Phone</p>
-        <!-- OFER - PHONE: replace the number below with your real number -->
-        <p class="contact-val"><a href="tel:+49000000000">+49 — add your number</a></p>
-      </div>
-      <div>
-        <p class="contact-lbl">Based in</p>
-        <p class="contact-val">Berlin, Germany<br><span style="font-size:0.82rem;color:rgba(122,112,101,0.7)">Available across Europe</span></p>
-      </div>
-      <div>
-        <p class="contact-lbl">Follow</p>
-        <!-- OFER - SOCIAL LINKS: replace the # with your real YouTube and Instagram URLs -->
-        <p class="contact-val">
-          <a href="#">YouTube</a> &nbsp;·&nbsp;
-          <a href="#">Instagram</a>
-        </p>
-      </div>
-    </div>
+    <div class="contact-items fade-in" id="contact-items"></div>
   </div>
 </section>
 
 <footer>
-  <p class="footer-copy">© 2025 Ofer Löwinger</p>
+  <p class="footer-copy" id="footer-copy"></p>
   <ul class="footer-nav">
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#about">About</a></li>
@@ -322,20 +188,154 @@ footer{background:var(--charcoal);border-top:1px solid rgba(184,150,90,0.15);pad
 </footer>
 
 <script>
-function switchTab(id){
-  document.querySelectorAll('.tab-btn').forEach((b,i)=>{
-    const ids=['piano-solo','accompaniment','violin'];
-    b.classList.toggle('active',ids[i]===id);
+// ─────────────────────────────────────────────────────────────────
+//  RENDER HELPERS
+// ─────────────────────────────────────────────────────────────────
+
+const PLAY_ICON = `
+  <div class="play-ring">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M4 2.5l8 4.5-8 4.5V2.5z" fill="#D4B07A"/>
+    </svg>
+  </div>`;
+
+// Renders one video card.
+// If youtube_id is filled in content.json → shows embedded YouTube player.
+// If youtube_id is empty → shows a "Coming soon" placeholder.
+function videoCard(video) {
+  const media = video.youtube_id
+    ? `<iframe class="video-embed"
+         src="https://www.youtube.com/embed/${video.youtube_id}"
+         allowfullscreen loading="lazy"></iframe>`
+    : `<div class="video-placeholder">
+         ${PLAY_ICON}
+         <span class="placeholder-label">Coming soon</span>
+       </div>`;
+  return `
+    <div class="video-card">
+      ${media}
+      <div class="video-info">
+        <p class="video-title">${video.title}</p>
+        <p class="video-sub">${video.subtitle}</p>
+      </div>
+    </div>`;
+}
+
+// Renders one full tab panel (description + video grid + gallery link).
+function tabPanel(cat, isFirst) {
+  const videos = cat.videos.map(videoCard).join('');
+  return `
+    <div id="${cat.id}" class="tab-panel fade-in ${isFirst ? 'active' : ''}">
+      <p class="tab-desc">${cat.description}</p>
+      <div class="videos-grid">${videos}</div>
+      <a href="${cat.gallery_link}" class="gallery-link">See full gallery →</a>
+    </div>`;
+}
+
+// Switches which tab is active.
+function switchTab(id) {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.id === id);
   });
-  document.querySelectorAll('.tab-panel').forEach(p=>{
-    p.classList.toggle('active',p.id===id);
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.toggle('active', p.id === id);
   });
 }
 
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
-},{threshold:0.12});
-document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+// ─────────────────────────────────────────────────────────────────
+//  MAIN — fetch content.json and populate the page
+// ─────────────────────────────────────────────────────────────────
+
+fetch('content.json')
+  .then(r => r.json())
+  .then(c => {
+
+    // Site title and nav logo
+    document.title = c.site.title;
+    document.getElementById('nav-logo').textContent = c.site.logo;
+
+    // Hero
+    document.getElementById('hero-eyebrow').textContent  = c.hero.eyebrow;
+    document.getElementById('hero-name').innerHTML       = `${c.hero.name_line1}<br><em>${c.hero.name_line2}</em>`;
+    document.getElementById('hero-tagline').textContent  = c.hero.tagline;
+    document.getElementById('hero-desc').textContent     = c.hero.description;
+    document.getElementById('hero-location').textContent = c.hero.location;
+    const img = document.getElementById('hero-img');
+    img.src = c.hero.photo;
+    img.alt = c.hero.photo_alt;
+
+    // Portfolio — tab buttons
+    document.getElementById('portfolio-label').textContent = c.portfolio.section_label;
+    document.getElementById('portfolio-title').textContent = c.portfolio.section_title;
+
+    const tabsHTML = c.portfolio.categories.map((cat, i) => `
+      <button class="tab-btn ${i === 0 ? 'active' : ''}"
+              data-id="${cat.id}"
+              onclick="switchTab('${cat.id}')">
+        ${cat.tab_label}
+      </button>`).join('');
+    document.getElementById('tabs-row').innerHTML = tabsHTML;
+
+    // Portfolio — tab panels with videos
+    const panelsHTML = c.portfolio.categories
+      .map((cat, i) => tabPanel(cat, i === 0)).join('');
+    document.getElementById('tab-panels').innerHTML = panelsHTML;
+
+    // About
+    document.getElementById('about-quote').textContent = `"${c.about.quote}"`;
+    const bioHTML  = c.about.bio.map(p => `<p>${p}</p>`).join('');
+    const tagsHTML = c.about.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    document.getElementById('about-body').innerHTML = bioHTML + `<div class="tags">${tagsHTML}</div>`;
+
+    // Contact
+    document.getElementById('contact-label').textContent = c.contact.section_label;
+    document.getElementById('contact-title').textContent = c.contact.section_title;
+    document.getElementById('contact-intro').textContent = c.contact.intro;
+    document.getElementById('contact-email-btn').href    = `mailto:${c.contact.email}`;
+
+    const socialLinks = c.contact.social
+      .map(s => `<a href="${s.url}">${s.label}</a>`)
+      .join(' &nbsp;·&nbsp; ');
+
+    document.getElementById('contact-items').innerHTML = `
+      <div>
+        <p class="contact-lbl">Email</p>
+        <p class="contact-val"><a href="mailto:${c.contact.email}">${c.contact.email}</a></p>
+      </div>
+      <div>
+        <p class="contact-lbl">WhatsApp / Phone</p>
+        <p class="contact-val"><a href="${c.contact.phone_href}">${c.contact.phone_display}</a></p>
+      </div>
+      <div>
+        <p class="contact-lbl">Based in</p>
+        <p class="contact-val">
+          ${c.contact.location}
+          <br><span style="font-size:0.82rem;color:rgba(122,112,101,0.7)">${c.contact.location_sub}</span>
+        </p>
+      </div>
+      <div>
+        <p class="contact-lbl">Follow</p>
+        <p class="contact-val">${socialLinks}</p>
+      </div>`;
+
+    // Footer
+    document.getElementById('footer-copy').textContent = c.footer.copyright;
+
+    // Fade-in scroll animation (runs after DOM is fully populated)
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+  })
+  .catch(err => {
+    document.body.innerHTML = `
+      <div style="padding:4rem;font-family:sans-serif;color:#B8965A;background:#FAF7F2;min-height:100vh">
+        <h2 style="margin-bottom:1rem">Could not load content.json</h2>
+        <p>Make sure <strong>content.json</strong> is in the same folder as <strong>index.html</strong>.</p>
+        <p style="margin-top:1rem;color:#7A7065;font-size:0.9rem">Error: ${err.message}</p>
+      </div>`;
+  });
 </script>
 </body>
 </html>
