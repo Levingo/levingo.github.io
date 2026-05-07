@@ -117,11 +117,11 @@ footer{background:var(--charcoal);border-top:1px solid rgba(184,150,90,0.15);pad
   .nav-links{gap:1rem}
   .nav-links a{font-size:0.68rem;letter-spacing:0.08em}
 
-  /* hero — stack vertically */
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-left{padding:7rem 1.25rem 3rem;order:2}
+  /* hero — photo full height behind text */
+  .hero{grid-template-columns:1fr;min-height:100vh;position:relative}
+  .hero-left{padding:7rem 1.25rem 3rem;order:1;position:relative;z-index:2;background:rgba(250,247,242,0.82)}
   .hero-left::after{display:none}
-  .hero-right{order:1;height:55vw;min-height:220px}
+  .hero-right{position:absolute;inset:0;order:1;height:100%}
   .hero-desc{max-width:100%}
 
   /* portfolio */
@@ -150,8 +150,8 @@ footer{background:var(--charcoal);border-top:1px solid rgba(184,150,90,0.15);pad
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     All visible content is injected by JavaScript from content.json.
-     To update text, videos, bio, or contact details — edit content.json.
+     All visible content is injected by JavaScript from content.js.
+     To update text, videos, bio, or contact details — edit content.js.
      Never edit the text content inside this file directly.
      ═══════════════════════════════════════════════════════════════ -->
 
@@ -227,6 +227,8 @@ footer{background:var(--charcoal);border-top:1px solid rgba(184,150,90,0.15);pad
   </ul>
 </footer>
 
+<script src="content.js"></script>
+
 <script>
 // ─────────────────────────────────────────────────────────────────
 //  RENDER HELPERS
@@ -240,7 +242,7 @@ const PLAY_ICON = `
   </div>`;
 
 // Renders one video card.
-// If youtube_id is filled in content.json → shows embedded YouTube player.
+// If youtube_id is filled in content.js → shows embedded YouTube player.
 // If youtube_id is empty → shows a "Coming soon" placeholder.
 function videoCard(video) {
   const media = video.youtube_id
@@ -283,12 +285,12 @@ function switchTab(id) {
 }
 
 // ─────────────────────────────────────────────────────────────────
-//  MAIN — fetch content.json and populate the page
+//  MAIN — read CONTENT from content.js and populate the page
 // ─────────────────────────────────────────────────────────────────
 
-fetch('content.json')
-  .then(r => r.json())
-  .then(c => {
+(function() {
+  const c = CONTENT;
+  {
 
     // Site title and nav logo
     document.title = c.site.title;
@@ -367,15 +369,13 @@ fetch('content.json')
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  })
-  .catch(err => {
-    document.body.innerHTML = `
-      <div style="padding:4rem;font-family:sans-serif;color:#B8965A;background:#FAF7F2;min-height:100vh">
-        <h2 style="margin-bottom:1rem">Could not load content.json</h2>
-        <p>Make sure <strong>content.json</strong> is in the same folder as <strong>index.html</strong>.</p>
-        <p style="margin-top:1rem;color:#7A7065;font-size:0.9rem">Error: ${err.message}</p>
-      </div>`;
-  });
+    // Apply mobile photo X position from content.js
+    const heroImg = document.getElementById('hero-img');
+    if (c.hero.photo_mobile_x) {
+      heroImg.style.objectPosition = `${c.hero.photo_mobile_x}% top`;
+    }
+  }
+})();
 </script>
 </body>
 </html>
