@@ -17,7 +17,7 @@ const CONTENT = {
     name_line2: "Löwinger",
     tagline:    "Piano & Violin — Solo, Duo & Live Performance",
     description:"Available for restaurants, hotels, events, and accompaniment. Bringing warmth and elegance to every setting — from intimate background music to fully live performance.",
-    photo:      "Ofer.png",
+    photo:      "ofer.png",
     photo_alt:  "Ofer Löwinger at the piano",
     location:   "Berlin, Germany",
 
