@@ -21,11 +21,12 @@ const CONTENT = {
     photo_alt:  "Ofer Löwinger at the piano",
     location:   "Berlin, Germany",
 
-    // OFER - MOBILE PHOTO: the photo is portrait, so on mobile only a vertical
-    // strip is shown. This number (0–100) controls which part of the photo is
-    // centered horizontally. 50 = dead center. Lower = more to the left, Higher = more to the right.
-    // Your face in Ofer.png is roughly in the left-center of the image.
-    photo_mobile_x: 35
+    // OFER - MOBILE PHOTO: on phones a different (cropped) image is used.
+    // Place your cropped portrait as "ofer2.png" in the same folder.
+    // It appears as a narrow strip on the RIGHT side of the screen.
+    // photo_mobile_opacity: 0.0 = invisible, 1.0 = fully opaque. 0.75 is a good starting point.
+    photo_mobile:         "ofer2.png",
+    photo_mobile_opacity: "0.75"
   },
 
   portfolio: {
