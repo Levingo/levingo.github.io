@@ -40,7 +40,7 @@ const CONTENT = {
       {
         id:          "piano-solo",
         tab_label:   "Piano Solo",
-        description: "Ambient and background repertoire — classical, jazz standards, and original arrangements for restaurants, hotels, and private events.",
+        description: "Ambient and background repertoire — classical, romantic music and original arrangements for restaurants, hotels, and private events.",
         gallery_link:"#",
 
         // OFER - VIDEOS PIANO SOLO:
@@ -50,9 +50,9 @@ const CONTENT = {
         // To remove a video: delete its { } block.
         // Leave youtube_id as "" to show a "Coming soon" placeholder.
         videos: [
-          { youtube_id: "", title: "Piano Solo — Venue Set",    subtitle: "Background · Classical"    },
-          { youtube_id: "", title: "Jazz Standards",            subtitle: "Background · Jazz"         },
-          { youtube_id: "", title: "Original Arrangement",      subtitle: "Solo · Contemporary"       }
+          { youtube_id: "", title: "Piano Solo — Venue Set",    subtitle: "Gallery Performance"    },
+          { youtube_id: "", title: "Jazz Standards",            subtitle: "Background · Romantic music"         },
+          { youtube_id: "", title: "Original Arrangement",      subtitle: "Solo"       }
         ]
       },
       {
@@ -91,7 +91,7 @@ const CONTENT = {
     // OFER - BIO: each string is one paragraph. Add or remove paragraphs as needed.
     bio: [
       "I'm <strong>Ofer Löwinger</strong>, a pianist and violinist based in <strong>Berlin</strong>. My work spans solo piano for restaurants and hotels, piano accompaniment for singers and instrumentalists, and live violin performance with custom orchestral playbacks.",
-      "With a background rooted in classical training and broadened by jazz, world music, and contemporary styles, I bring both technical depth and genuine musicality to every engagement. Whether the setting calls for soft background ambience or a full live act, I adapt to the room and the audience.",
+      "With a background rooted in classical training and broadened by folk, world music, and contemporary styles, I bring both technical depth and genuine musicality to every engagement. Whether the setting calls for soft background ambience or a full live act, I adapt to the room and the audience.",
       "Currently performing regularly in Berlin and available for bookings across Germany and Europe — including restaurants, cruise ships, private events, and concert stages."
     ],
 
@@ -101,7 +101,7 @@ const CONTENT = {
       "Piano Accompaniment",
       "Violin Live",
       "Classical",
-      "Jazz",
+      "Folk Music",
       "Background Music",
       "Available Europe-wide"
     ]
@@ -113,16 +113,16 @@ const CONTENT = {
     intro:         "Available for restaurant residencies, cruise ship engagements, private events, and accompaniment sessions. Based in Berlin — open to travel.",
 
     // OFER - CONTACT DETAILS: fill in your real info below
-    email:         "ofer@loewinger.art",
-    phone_display: "+49 — add your number",
-    phone_href:    "tel:+49000000000",
+    email:         "lev240@gmail.com",
+    phone_display: "+49 — 171 - 3125921",
+    phone_href:    "tel:+491713125921",
     location:      "Berlin, Germany",
     location_sub:  "Available across Europe",
 
     // OFER - SOCIAL LINKS: replace the url values with your real links
     social: [
       { label: "YouTube",   url: "#" },
-      { label: "Instagram", url: "#" }
+      { label: "Instagram", url: "https://www.instagram.com/ofer.loewinger" }
     ]
   },
 
