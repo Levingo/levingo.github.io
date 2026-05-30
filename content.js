@@ -63,7 +63,7 @@ const CONTENT = {
 
         // OFER - VIDEOS ACCOMPANIMENT
         videos: [
-          { youtube_id: "", title: "Piano & Vocalist",          subtitle: "Duo · Live Performance"    },
+          { youtube_id: "k8c5qZ2u2KQ", title: "Piano & Violin Live",          subtitle: "Duo · Live Performance"    },
           { youtube_id: "lq-X5Wqo2Ro", title: "Piano & Trumpet",           subtitle: "Duo · Classical"           },
           { youtube_id: "", title: "Chamber Session",           subtitle: "Ensemble · Live"           }
         ]
