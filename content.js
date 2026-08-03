@@ -52,8 +52,8 @@ const CONTENT = {
         videos: [
           { youtube_id: "AB4zeMFVdjM", title: "Experience",    subtitle: "Piano Performance"    },
           { youtube_id: "vBVYnMVIEPE", title: "German Chanson",    subtitle: "Gallery Performance"    },
-          { youtube_id: "1XZL9HUONC0", title: "Chanson",            subtitle: "Background · Romantic music"         },
-          { youtube_id: "pjvCj_-Y4Lc", title: "Live at Bahnhof Leisnig",      subtitle: "Background · Romantic music"       }
+          { youtube_id: "pjvCj_-Y4Lc", title: "Live at Bahnhof Leisnig",      subtitle: "Background · Romantic music"       },
+          { youtube_id: "1XZL9HUONC0", title: "Chanson",            subtitle: "Background · Romantic music"         }
         ]
       },
       {
@@ -65,8 +65,8 @@ const CONTENT = {
         // OFER - VIDEOS ACCOMPANIMENT
         videos: [
           { youtube_id: "k8c5qZ2u2KQ", title: "Piano & Violin Live",          subtitle: "Duo · Live Performance"    },
-          { youtube_id: "lq-X5Wqo2Ro", title: "Piano & Trumpet",           subtitle: "Duo · Classical"           },
-          { youtube_id: "", title: "Chamber Session",           subtitle: "Ensemble · Live"           }
+          { youtube_id: "lq-X5Wqo2Ro", title: "Piano & Trumpet",           subtitle: "Duo · Classical"           }
+        
         ]
       },
       {
@@ -77,9 +77,8 @@ const CONTENT = {
 
         // OFER - VIDEOS VIOLIN
         videos: [
-          { youtube_id: "quXBr5Fu23E", title: "Violin Street Performance", subtitle: "Live in Split"             },
-          { youtube_id: "", title: "Classical Violin",          subtitle: "Solo · Playback"           },
-          { youtube_id: "", title: "Violin & Piano Set",        subtitle: "Live Event"                }
+          { youtube_id: "quXBr5Fu23E", title: "Violin Street Performance", subtitle: "Live in Split"             }
+        
         ]
       }
     ]
