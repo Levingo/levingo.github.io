@@ -50,6 +50,7 @@ const CONTENT = {
         // To remove a video: delete its { } block.
         // Leave youtube_id as "" to show a "Coming soon" placeholder.
         videos: [
+          { youtube_id: "AB4zeMFVdjM", title: "Experience",    subtitle: "Piano Performance"    },
           { youtube_id: "vBVYnMVIEPE", title: "German Chanson",    subtitle: "Gallery Performance"    },
           { youtube_id: "1XZL9HUONC0", title: "Chanson",            subtitle: "Background · Romantic music"         },
           { youtube_id: "pjvCj_-Y4Lc", title: "Live at Bahnhof Leisnig",      subtitle: "Background · Romantic music"       }
